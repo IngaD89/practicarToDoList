@@ -9,12 +9,9 @@ import java.util.List;
 
 
 public class TasksController {
-    private List<Task> tasks;
+    private final List<Task> tasks = new ArrayList<>();
 
 
-    public TasksController() {
-        tasks = new ArrayList<>();
-    }
 
     @GetMapping("/tasks")
     public List<Task> allTasks() {
